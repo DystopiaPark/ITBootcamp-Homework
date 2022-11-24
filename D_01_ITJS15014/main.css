@@ -1,0 +1,195 @@
+/* global */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.section {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+
+/* HOME */
+
+/* hero */
+nav {
+  position: relative;
+  background: white;
+  height: 3rem;
+  box-shadow: 0 10px 20px rgba(218, 12, 12, 0.2);
+  z-index: 2;
+}
+.link {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.link li {
+  margin-top: 0.75rem;
+  color: cyan;
+  list-style-type: none;
+}
+.link a {
+  color: cyan;
+}
+
+.links {
+  color: blue;
+  font-size: 1.5rem;
+}
+.links:hover {
+  background-color: rgba(218, 12, 12, 0.2);
+  box-shadow: 0 10px 20px rgba(218, 12, 12, 0.2);
+}
+/* hero */
+.hero {
+  height: calc(100vh - 3rem);
+  background-image: linear-gradient(
+      rgba(22, 66, 188, 0.6),
+      rgba(21, 111, 168, 0.6)
+    ),
+    url("./images/1891584_10152197324816912_199496955_o.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.hero-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-center h1 {
+  color: rgba(218, 12, 12, 0.8);
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+#slika-1 {
+  border: 10px solid aqua;
+  width: 300px;
+  height: 400px;
+  box-shadow: 100px 100px 100px rgba(218, 12, 12, 0.2);
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* info */
+.info {
+  display: grid;
+  place-items: center;
+}
+.info p {
+  max-width: 80vw;
+  text-align: center;
+  border: 3px rgba(218, 12, 12, 0.2) dotted;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+/* nalozi */
+.nalozi {
+  padding-top: 3rem;
+}
+.nalozi p {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-bottom: 2rem;
+  color: rgba(22, 66, 188, 0.6);
+}
+.nalozi p a:visited {
+  color: blue;
+}
+.nalozi img {
+  border: 5px rgba(218, 12, 12, 0.2) dashed;
+}
+.nalozi img:hover {
+  zoom: 50%;
+  transform: scale(1.05);
+}
+.kraj {
+  padding-top: 2rem;
+}
+.kraj p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.kraj button {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: rgba(218, 12, 12, 0.2);
+  color: rgba(6, 116, 242, 0.6);
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-5%);
+}
+
+/* OMILJENO */
+
+/* liste */
+.favourite-main {
+  display: flex;
+}
+.liste {
+  margin: 5rem auto;
+  max-width: 25%;
+}
+.liste img {
+  height: 270px;
+  width: 270px;
+  object-fit: cover;
+  border: 10px solid rgba(22, 66, 188, 0.6);
+}
+.liste h3 {
+  padding-bottom: 1rem;
+}
+.liste ol {
+  padding: 1rem 0 0 1.25rem;
+  font-size: 1.1rem;
+  max-width: 270px;
+}
+
+/* CONTACT */
+
+.kontakt-main {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 3rem);
+}
+.kontakt-main p {
+  font-size: 5rem;
+  text-align: center;
+  color: rgba(6, 116, 242, 0.6);
+}
+
+/* PROJEKTI */
+.projekti-main {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 3rem);
+}
+.projekti-main p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgba(6, 116, 242, 0.6);
+  max-width: 800px;
+}
+
+.projekti-main span {
+  color: red;
+}
+.projekti-main a {
+  color: green;
+}

@@ -1,0 +1,36 @@
+body {
+  background: rgb(161, 157, 119);
+}
+.meta-container {
+  display: flex;
+}
+
+h2 {
+  color: palegreen;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+img {
+  border: 10px double darkred;
+  height: 400px;
+  width: 300px;
+}
+.paragraf {
+  color: darkgreen;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+}
+.paragraphs {
+  max-width: 900px;
+  padding: 1rem;
+}
+.paragraphs p:nth-child(2) {
+  color: darkblue;
+}
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+}
