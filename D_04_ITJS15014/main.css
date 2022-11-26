@@ -29,8 +29,7 @@ fieldset {
   padding: 0.5rem 2.5rem;
 }
 .login-container label {
-  display: inline-block;
-  min-width: 70px;
+  margin-right: 60px;
 }
 /* FEEDBACK */
 .feedback-div {
@@ -80,11 +79,15 @@ button:hover {
   min-width: 110px;
 }
 td input {
-  float: right;
   margin-left: 5rem;
   accent-color: rgb(19, 189, 67);
 }
 input,
 textarea {
   color: rgb(19, 189, 67);
+}
+select {
+  background: rgb(19, 189, 67);
+  border: 2px red solid;
+  color: white;
 }
