@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(20, 173, 79, 0.6)),
+    url(pexels-holiho-1112186.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  color: white;
+  font-size: 1.1rem;
+}
+@media screen and (min-height: 718px) {
+  main {
+    height: 100vh;
+  }
+}
+
+fieldset {
+  width: 600px;
+  max-width: 500px;
+  border-color: red;
+  margin-bottom: 2rem;
+}
+.login-container div {
+  padding: 0.5rem 2.5rem;
+}
+.login-container label {
+  display: inline-block;
+  min-width: 70px;
+}
+/* FEEDBACK */
+.feedback-div {
+  margin-left: 3rem;
+  padding: 1rem 0;
+}
+.margin-div {
+  margin-left: 2rem;
+}
+.last-form {
+  margin-left: 3rem;
+}
+.last-form div {
+  margin-top: 0.5rem;
+}
+/* BUTTONS */
+button {
+  background-color: rgb(19, 189, 67);
+  display: block;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  border: red 2px solid;
+  color: white;
+}
+.btn-container {
+  margin-left: 3rem;
+  padding-bottom: 1.5rem;
+}
+#btn {
+  padding: 0.5rem 0.7rem;
+}
+button:hover {
+  cursor: pointer;
+  color: rgb(19, 189, 67);
+  background: white;
+}
+.photo-div input {
+  background-color: rgb(19, 189, 67);
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  border: red 2px solid;
+  color: white;
+}
+.photo-div label {
+  display: inline-block;
+  min-width: 110px;
+}
+td input {
+  float: right;
+  margin-left: 5rem;
+  accent-color: rgb(19, 189, 67);
+}
+input,
+textarea {
+  color: rgb(19, 189, 67);
+}
