@@ -64,7 +64,7 @@ button {
 }
 button:hover {
   cursor: pointer;
-  color: rgb(19, 189, 67);
+  color: rgb(19, 189, 68);
   background: white;
 }
 .photo-div input {
