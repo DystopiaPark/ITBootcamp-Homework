@@ -9,6 +9,48 @@ body {
   place-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/pexels-brett-sayles-2097628.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style: none;
+}
+
+/* NAV */
+
+nav {
+  display: grid;
+  place-items: center;
+  height: 2.5rem;
+  background-color: rgb(15, 87, 195);
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.2);
+}
+.nav-center {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.links {
+  display: flex;
+  gap: 6.8rem;
+  text-transform: uppercase;
+}
+.links a:hover {
+  background-color: white;
+  color: rgb(15, 87, 195);
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+/* drop menu */
+
+#drop-menu {
+  display: none;
 }
 
 /* WELCOME */
@@ -25,7 +67,7 @@ body {
 
 .welcome h1 {
   color: white;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 /* CARDS */
@@ -68,6 +110,11 @@ body {
 /* RESPONSIVE */
 
 @media screen and (min-width: 1200px) {
+  /* nav responsive */
+  .links {
+    gap: 9rem;
+  }
+  /* cards responsive */
   .card-img {
     width: 250px;
     height: 250px;
@@ -78,6 +125,11 @@ body {
 }
 
 @media screen and (max-width: 823px) {
+  /* nav responsive */
+  .links {
+    gap: 6rem;
+  }
+
   /* cards responsive */
   .cards {
     display: block;
@@ -97,6 +149,27 @@ body {
   /* aside responsive */
   aside h3,
   aside p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  /* nav responsive */
+  .links {
+    gap: 3rem;
+    font-size: 11px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 466px) and (min-width: 358px) {
+  /* nav responsive */
+  .links {
+    gap: 1rem;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  /* welcome responsive */
+  .welcome h1 {
     text-align: center;
   }
 }
