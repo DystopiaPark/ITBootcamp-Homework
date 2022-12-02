@@ -104,6 +104,12 @@ a {
   }
 }
 
+@media only screen and (max-width: 727px) and (min-width: 601px) {
+  button {
+    font-size: 11px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .col-5 {
     width: 41.66%;
@@ -111,8 +117,8 @@ a {
   button {
     width: 100%;
   }
-  .row div {
-    padding-bottom: 0.25rem;
+  span {
+    display: none;
   }
 }
 
@@ -123,7 +129,9 @@ a {
   overflow: hidden;
   margin: 0.25rem 0;
 }
-input {
+input,
+select,
+textarea {
   width: 100%;
   border-radius: 5px;
   border: 2px solid gray;
@@ -133,27 +141,15 @@ label {
   display: block;
   padding: 0.35rem 0;
 }
-select {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid gray;
-  padding: 0.35rem 0.5rem;
-}
-textarea {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid gray;
-  padding: 0.35rem 0.5rem;
-}
 fieldset {
   background: var(--clr-primary-9);
   border: none;
   padding: 1rem;
 }
 button {
-  float: right;
+  /* float: right; */
   background: rgb(21, 190, 21);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
   color: white;
   border: none;
   border-radius: 3px;
@@ -171,10 +167,4 @@ i {
 }
 #search-indent {
   text-indent: 1.25rem;
-}
-.remove-margin {
-  margin: 0;
-}
-.remove-margin-bottom {
-  margin-bottom: 0;
 }

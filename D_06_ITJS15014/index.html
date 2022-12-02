@@ -15,20 +15,17 @@
       <fieldset>
         <!-- ROW 1 -->
         <div class="row">
-          <div class="col-2">
-            <label for="name">Ime i prezime:</label>
-          </div>
-          <div class="col-10">
-            <input
-              type="text"
-              name="name"
-              placeholder="Unesite svoje ime i prezime"
-            />
-          </div>
+          <label for="name" class="col-2">Ime i prezime:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Unesite svoje ime i prezime"
+            class="col-10"
+          />
         </div>
         <!-- ROW 2 -->
         <div class="row">
-          <div class="col-2"><label for="search">Pretrazite:</label></div>
+          <label for="search" class="col-2">Pretrazite:</label>
           <div class="col-5 relative-parent">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
@@ -38,39 +35,45 @@
               id="search-indent"
             />
           </div>
+          <span class="col-5">&nbsp</span>
         </div>
         <!-- ROW 3 -->
         <div class="row">
-          <div class="col-2 padding"><label for="location">Zemlja:</label></div>
-          <div class="col-10">
-            <select name="location" id="">
-              <option value="Italija">Italija</option>
-              <option value="Italija">Nemacka</option>
-              <option value="Italija">Grcka</option>
-              <option value="Italija">Francuska</option>
-              <option value="Italija">Spanija</option>
-            </select>
-          </div>
+          <label for="location" class="col-2">Zemlja:</label>
+          <select name="location" id="" class="col-10">
+            <option value="Italija">Italija</option>
+            <option value="Italija">Nemacka</option>
+            <option value="Italija">Grcka</option>
+            <option value="Italija">Francuska</option>
+            <option value="Italija">Spanija</option>
+          </select>
         </div>
         <!-- ROW 4 -->
-        <div class="row remove-margin-bottom">
-          <div class="col-2"><label for="description">Opis:</label></div>
-          <div class="col-10">
-            <textarea
-              name="description"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Napisite neki opis..."
-            ></textarea>
-          </div>
+        <div class="row">
+          <label for="description" class="col-2">Opis:</label>
+          <textarea
+            name="description"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Napisite neki opis..."
+            class="col-10"
+          ></textarea>
         </div>
         <!-- ROW 5 -->
-        <div class="row remove-margin">
-          <div class="col-12">
-            <button type="submit">Potvrdite</button>
-          </div>
+        <div class="row">
+          <span class="col-11">&nbsp</span>
+          <button type="submit" class="col-1">Potvrdite</button>
         </div>
+        <!-- 
+
+          U rowu 5 button gubi padding i izjeda mu se tekst kada smanjujem ekran, te sam morao da uvedem media screen od 727px do 601px kako bih mu smanjio font-size jer to ne radi samostalno. 
+
+          Sa kodom ispod funkcionise kada u css-u postavim float right za button. Iako tako izgleda elegantnije stilisticno, cini mi se da je to vise hack nego resenje problema.
+
+        <div class="row col-12">
+          <button type="submit">Potvrdite</button>
+        </div> -->
       </fieldset>
     </form>
   </body>
