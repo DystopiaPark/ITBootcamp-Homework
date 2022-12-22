@@ -11,8 +11,8 @@ let listaNiz = ["prasak", "zejtin", "hleb", "so", "kafa", "sirce"];
 
 // 1) standard
 
-let lista = `<ul>`;
 let kupovina = (niz) => {
+  let lista = `<ul>`;
   for (i = 0; i < niz.length; i++) {
     lista += `
       <li>${niz[i]}</li>
@@ -22,17 +22,16 @@ let kupovina = (niz) => {
   return lista;
 };
 
-kupovina(listaNiz);
-document.body.innerHTML += lista;
+document.body.innerHTML += kupovina(listaNiz);
 
 // 2) forEach
 
 let lista2 = `<ul>`;
 let kupovina2 = (niz) => {
-    lista2 += `
+  lista2 += `
       <li>${niz}</li>
       `;
-    return lista2;
+  return lista2;
 };
 
 listaNiz.forEach(kupovina2);
@@ -54,7 +53,7 @@ let imenaTimovaNiz = [
   "Bucks",
   "76'ers",
   "Lakers",
-  "Grizzlies"
+  "Grizzlies",
 ];
 
 let imenaIgracaNiz = [
@@ -63,13 +62,13 @@ let imenaIgracaNiz = [
   "Antetekumpo",
   "Embid",
   "Lebron",
-  "Morant"
+  "Morant",
 ];
 
 // 1) standard
 
-let tabela = `<table border= 1>`;
 let kosarka = (niz1, niz2) => {
+  let tabela = `<table border= 1>`;
   for (i = 0; i < niz1.length; i++) {
     tabela += `
       <tr>
@@ -82,19 +81,18 @@ let kosarka = (niz1, niz2) => {
   return tabela;
 };
 
-kosarka(imenaTimovaNiz, imenaIgracaNiz);
-document.body.innerHTML += tabela;
+document.body.innerHTML += kosarka(imenaTimovaNiz, imenaIgracaNiz);
 
 // 2) forEach
 
 let tabela2 = `<table border= 1>`;
 let kosarka2 = (niz1) => {
-    tabela2 += `
+  tabela2 += `
       <tr>
         <td>${niz1}</td>
       </tr>
     `;
-    return tabela2;
+  return tabela2;
 };
 
 imenaTimovaNiz.forEach(kosarka2);
@@ -114,7 +112,7 @@ let imgNiz = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
   "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
   "https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014__340.jpg",
-  "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+  "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
 ];
 
 // 1) standard
@@ -128,7 +126,7 @@ imgPut(imgNiz);
 
 // 2) forEach
 
-let imgPut2 = niz => {
-    document.write(`<img src=${niz} style="width: 300px; height: 300px;"/>`);
-}
+let imgPut2 = (niz) => {
+  document.write(`<img src=${niz} style="width: 300px; height: 300px;"/>`);
+};
 imgNiz.forEach(imgPut2);
