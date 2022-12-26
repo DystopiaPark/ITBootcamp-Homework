@@ -20,7 +20,7 @@ let dan = {
   // Dan je nepovoljan ako je razlika između neka dva uzastopna merenja veća od 8 stepeni. Metod vraća true ukoliko je dan bio nepovoljan, u suprotnom vraća false.
   nepovoljanDan: function () {
     let nepovoljan = false;
-    for (i = 0; i < this.temperature.length; i++) {
+    for (i = 0; i < this.temperature.length - 1; i++) {
       if (Math.abs(this.temperature[i] - this.temperature[i + 1]) > 8) {
         nepovoljan = true;
       }
@@ -41,7 +41,7 @@ let dan = {
       }
     });
     return neuobicajan;
-  }
+  },
 };
 console.log(dan.tropskiDan());
 console.log(dan.nepovoljanDan());
