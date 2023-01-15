@@ -93,6 +93,16 @@ class Knjiga {
       return false;
     }
   }
+  stampajListu() {
+    let htmlLista = `<ul>
+        <li>Naslov: ${this.naslov}</li>
+        <li>Autor: ${this.autor}</li>
+        <li>Godina izdanja: ${this.godIzdanja}</li>
+        <li>Broj strana: ${this.brojStrana}</li>
+        <li>Cena: ${this.cena}</li>
+      </ul>`;
+    return htmlLista;
+  }
 }
 
 // export

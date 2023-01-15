@@ -16,27 +16,74 @@ let k5 = new Knjiga("Mali Princ", "Antoan De Sent Egziperi", 1943, 112, 600);
 let k6 = new Knjiga("", "", "", "", "");
 
 let nizKnjiga = [k1, k2, k3, k4, k5, k6];
-console.log(nizKnjiga);
+
+// Ispis svih knjiga
+
+let sveBtn = document.getElementById("sve-btn");
+let sveResetBtn = document.getElementById("sve-btn-reset");
+let sveP = document.getElementById("sve-p");
+sveBtn.addEventListener("click", () => {
+  sveP.textContent = "";
+  nizKnjiga.forEach((knjiga) => {
+    sveP.innerHTML += knjiga.stampajListu();
+  });
+});
+
+sveResetBtn.addEventListener("click", () => {
+  sveP.textContent = "";
+});
 
 // Ispisati sve autore kojima je ime dugačko.
 
-nizKnjiga.forEach((knjiga) => {
-  if (knjiga.dugackoIme() == true) {
-    console.log(knjiga);
-  }
+let dugoImeBtn = document.getElementById("dugo-btn");
+let dugoImeP = document.getElementById("dugo-p");
+let dugoResetBtn = document.getElementById("dugo-btn-reset");
+dugoImeBtn.addEventListener("click", () => {
+  dugoImeP.textContent = "";
+  nizKnjiga.forEach((knjiga) => {
+    if (knjiga.dugackoIme() == true) {
+      dugoImeP.innerHTML = knjiga.stampajListu();
+    }
+  });
+});
+
+dugoResetBtn.addEventListener("click", () => {
+  dugoImeP.textContent = "";
 });
 
 // Ispisati sve one knjige koje su istovremeno i skupe i obimne.
 
-nizKnjiga.forEach((knjiga) => {
-  if (knjiga.obimna() == true && knjiga.skupa() == true) {
-    console.log(knjiga);
-  }
+let skupoObimneBtn = document.getElementById("skupo-obimne-btn");
+let skupoObimneResetBtn = document.getElementById("skupo-obimne-btn-reset");
+let skupoObimneP = document.getElementById("skupo-obimne-p");
+skupoObimneBtn.addEventListener("click", () => {
+  skupoObimneP.textContent = "";
+  nizKnjiga.forEach((knjiga) => {
+    if (knjiga.obimna() == true && knjiga.skupa() == true) {
+      skupoObimneP.innerHTML = knjiga.stampajListu();
+    }
+  });
+});
+
+skupoObimneResetBtn.addEventListener("click", () => {
+  skupoObimneP.textContent = "";
 });
 
 // Napraviti sledeće funkicje kojima se prosleđuje niz knjiga:
 
 // ukupnaCena - Određuje i vraća koliko ukupno koštaju sve knjge u nizu knjiga
+
+let ukupnoBtn = document.getElementById("ukupno-btn");
+let ukupnoResetBtn = document.getElementById("ukupno-btn-reset");
+let ukupnoP = document.getElementById("ukupno-p");
+ukupnoBtn.addEventListener("click", () => {
+  ukupnoP.textContent = "";
+  ukupnoP.textContent = `Ukupna cena je : ${ukupnaCena(nizKnjiga)}`;
+});
+
+ukupnoResetBtn.addEventListener("click", () => {
+  ukupnoP.textContent = "";
+});
 
 let ukupnaCena = (niz) => {
   let zbir = 0;
@@ -46,9 +93,18 @@ let ukupnaCena = (niz) => {
   return zbir;
 };
 
-console.log(ukupnaCena(nizKnjiga));
-
 // prosecnaCena - Određuje i vraća kolika je prosečna cena knjige
+let prosecnoBtn = document.getElementById("prosecno-btn");
+let prosecnoResetBtn = document.getElementById("prosecno-btn-reset");
+let prosecnoP = document.getElementById("prosecno-p");
+prosecnoBtn.addEventListener("click", () => {
+  prosecnoP.textContent = "";
+  prosecnoP.textContent = `Prosecna cena je : ${prosecnaCena(nizKnjiga)}`;
+});
+
+prosecnoResetBtn.addEventListener("click", () => {
+  prosecnoP.textContent = "";
+});
 
 let prosecnaCena = (niz) => {
   let zbir = 0;
@@ -58,8 +114,21 @@ let prosecnaCena = (niz) => {
   return zbir / niz.length;
 };
 
-console.log(prosecnaCena(nizKnjiga));
 // prosecnaStranica - Određuje i vraća kolika je prosečna cena jedne stranice knjige
+
+let prosecnoSBtn = document.getElementById("prosecnoS-btn");
+let prosecnoSResetBtn = document.getElementById("prosecnoS-btn-reset");
+let prosecnoSP = document.getElementById("prosecnoS-p");
+prosecnoSBtn.addEventListener("click", () => {
+  prosecnoSP.textContent = "";
+  prosecnoSP.textContent = `Prosecna cena po stranici je : ${prosecnaStranica(
+    nizKnjiga
+  )}`;
+});
+
+prosecnoSResetBtn.addEventListener("click", () => {
+  prosecnoSP.textContent = "";
+});
 
 let prosecnaStranica = (niz) => {
   let zbir = ukupnaCena(niz);
@@ -70,4 +139,10 @@ let prosecnaStranica = (niz) => {
   return zbir / ukupnoStranica;
 };
 
-console.log(prosecnaStranica(nizKnjiga));
+let resetBtn = document.getElementById("reset-btn");
+resetBtn.style.position = "fixed";
+resetBtn.style.top = 0;
+resetBtn.style.right = 0;
+resetBtn.addEventListener("click", () => {
+  location.reload();
+});
