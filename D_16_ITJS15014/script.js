@@ -1,5 +1,5 @@
 // GLOBALNE VARIJABLE ================================================================
-
+let allLi = document.querySelectorAll("li");
 let ulTasks = document.querySelector("ul");
 let inputTask = document.getElementById("task");
 let niz = [];
@@ -44,6 +44,12 @@ let ucitajListuIzLokalStoragea = () => {
 ucitajListuIzLokalStoragea();
 
 // BRISI ELEMENTE IZ DOMA I LOCAL STORAGEA =============================================
+
+ulTasks.addEventListener("click", () => {
+  allLi.forEach((el) => {
+    el.style.display = "none";
+  });
+});
 
 let obrisiIzDomaIStoragea = () => {
   ulTasks.addEventListener("click", (e) => {

@@ -1,0 +1,27 @@
+[
+  {
+    "imePrezime": "Luka Doncic",
+    "visina": 2.01,
+    "timovi": ["Mavericks", "Real Madrid"]
+  },
+  {
+    "imePrezime": "Nikola Jokic",
+    "visina": 2.14,
+    "timovi": ["Nuggets", "Partizan", "Crvena Zvezda"]
+  },
+  {
+    "imePrezime": "Kobe Bryant",
+    "visina": 1.99,
+    "timovi": ["Lakers", "Rockets", "Zdravlje"]
+  },
+  {
+    "imePrezime": "Boban Marjanovic",
+    "visina": 2.21,
+    "timovi": ["Dalas", "Buducnost", "Partizan"]
+  },
+  {
+    "imePrezime": "Trae Young",
+    "visina": 1.9,
+    "timovi": ["Hawks", "Grizzlies", "Celtics"]
+  }
+]
