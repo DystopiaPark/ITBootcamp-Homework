@@ -8,7 +8,7 @@ let getUsers = (resolve, reject) => {
       reject("Desila se greska");
     }
   });
-  request.open("GET", "http://localhost:3000/sportisti");
+  request.open("GET", "sportisti.json");
   request.send();
 };
 
