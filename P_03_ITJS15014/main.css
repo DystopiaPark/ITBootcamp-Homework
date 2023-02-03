@@ -51,9 +51,9 @@ Global CSS
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background: url(b.jpg);
-}
+} */
 
 body::-webkit-scrollbar {
   width: 1rem;
@@ -179,7 +179,25 @@ Chat Section CSS
 .date {
   color: var(--clr-grey-2);
 }
+.bin {
+  float: right;
+  cursor: pointer;
+}
+/*
+=============== 
+Choose Color Section
+===============
+*/
 
+#change-color-btn {
+  padding: 0.25rem 0;
+  background-color: var(--clr-primary-5);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+#change-color-input {
+  cursor: pointer;
+}
 /*
 =============== 
 Input Section CSS

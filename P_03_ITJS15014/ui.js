@@ -14,7 +14,9 @@ export class ChatUI {
   }
 
   // METODA templateLi
-  templateLI(data) {
+  templateLI(metadata) {
+    let data = metadata.data();
+    let id = metadata.id;
     let date = data.created_at.toDate();
     let day = date.getDate();
     let month = date.getMonth() + 1;
@@ -35,17 +37,19 @@ export class ChatUI {
     }
     let htmlLI;
     if (data.username == localStorage.user) {
-      htmlLI = `<li class="right-messages">
+      htmlLI = `<li class="right-messages" id="${id}>
             <span class="username">${data.username}: </span>
             <span class="message">${data.message}</span>
             <div class="date">${writeDate}</div>
+            <i class="bin">🥫</i>
         </li>`;
       this.list.innerHTML += htmlLI;
     } else {
-      htmlLI = `<li class="left-messages">
+      htmlLI = `<li class="left-messages" id="${id}>
             <span class="username">${data.username}: </span>
             <span class="message">${data.message}</span>
             <div class="date">${writeDate}</div>
+            <i class="bin">🥫</i>
         </li>`;
       this.list.innerHTML += htmlLI;
     }

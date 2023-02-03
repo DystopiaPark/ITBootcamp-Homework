@@ -11,6 +11,17 @@ let imeSection = document.getElementById("ime-section");
 let navUL = document.getElementById("nav-ul");
 let chatSection = document.getElementById("chat-section");
 let prevButton;
+let changeColorBtn = document.getElementById("change-color-btn");
+let changeColorInput = document.getElementById("change-color-input");
+
+// Change background color
+changeColorBtn.addEventListener("click", () => {
+  let value = changeColorInput.value;
+  setTimeout(() => {
+    document.body.style.background = value;
+  }, 500);
+  localStorage.setItem("color", value);
+});
 
 // Loads username
 let username;
@@ -30,11 +41,13 @@ if (localStorage.room) {
   localStorage.setItem("room", room);
 }
 
-// Sets current room list color on load/reload
+// Sets current room list color and background color on load/reload
 onload = (e) => {
   let color = document.getElementById(room);
   color.style.opacity = 0.7;
   prevButton = color;
+  let backgroundColor = localStorage.getItem("color");
+  document.body.style.background = backgroundColor;
 };
 
 // Objects
@@ -105,5 +118,20 @@ navUL.addEventListener("click", (e) => {
       prevButton.style.opacity = "1";
     }
     prevButton = e.target;
+  }
+});
+
+// Delete message
+
+chatSection.addEventListener("click", (e) => {
+  if (e.target.tagName === "I") {
+    let li = e.target.parentElement;
+    let id = li.id;
+    console.log(li);
+    chatroom.chats
+      .doc(id)
+      .delete()
+      .then(() => li.remove())
+      .catch((err) => console.log(err));
   }
 });

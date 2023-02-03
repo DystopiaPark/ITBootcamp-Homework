@@ -51,7 +51,7 @@ class Chatroom {
         let changes = snapshot.docChanges();
         changes.forEach((change) => {
           if (change.type == "added") {
-            cb(change.doc.data());
+            cb(change.doc);
           }
         });
       });
