@@ -37,7 +37,7 @@ export class ChatUI {
     }
     let htmlLI;
     if (data.username == localStorage.user) {
-      htmlLI = `<li class="right-messages" id="${id}>
+      htmlLI = `<li class="right-messages" id="${id}">
             <span class="username">${data.username}: </span>
             <span class="message">${data.message}</span>
             <div class="date">${writeDate}</div>
@@ -45,7 +45,7 @@ export class ChatUI {
         </li>`;
       this.list.innerHTML += htmlLI;
     } else {
-      htmlLI = `<li class="left-messages" id="${id}>
+      htmlLI = `<li class="left-messages" id="${id}">
             <span class="username">${data.username}: </span>
             <span class="message">${data.message}</span>
             <div class="date">${writeDate}</div>

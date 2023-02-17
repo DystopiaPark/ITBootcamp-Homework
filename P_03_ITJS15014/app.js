@@ -62,6 +62,7 @@ let makeChange = () => {
   });
 };
 makeChange();
+console.log(makeChange);
 
 // Inputs chat
 sendBtn.addEventListener("click", () => {
@@ -88,9 +89,11 @@ updateBtn.addEventListener("click", () => {
   ime.textContent = `New username: ${chatroom.username}`;
   imeSection.appendChild(ime);
   window.scrollTo(0, document.body.scrollHeight);
+  chatroom.updateUsername(chatroom.username);
+  makeChange();
+  console.log(makeChange);
   setTimeout(() => {
     ime.remove();
-    location.reload();
   }, 3000);
 });
 
@@ -122,16 +125,26 @@ navUL.addEventListener("click", (e) => {
 });
 
 // Delete message
-
 chatSection.addEventListener("click", (e) => {
   if (e.target.tagName === "I") {
     let li = e.target.parentElement;
     let id = li.id;
-    console.log(li);
-    chatroom.chats
-      .doc(id)
-      .delete()
-      .then(() => li.remove())
-      .catch((err) => console.log(err));
+    let user = li.firstElementChild.textContent.slice(0, -2);
+    if (user == localStorage.user) {
+      chatroom.chats
+        .doc(id)
+        .delete()
+        .then(() => li.remove())
+        .catch((err) => console.log(err));
+    } else {
+      li.remove();
+      if (confirm("Da li zelite trajno da izbrisete ovu poruku?") == true) {
+        chatroom.chats
+          .doc(id)
+          .delete()
+          .then(() => console.log("message removed"))
+          .catch((err) => console.log(err));
+      }
+    }
   }
 });

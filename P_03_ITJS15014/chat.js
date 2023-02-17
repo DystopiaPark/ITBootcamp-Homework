@@ -4,6 +4,7 @@ class Chatroom {
     this.username = username;
     this.chats = db.collection("chats");
     this.unsub; // Bice undefined prilikom kreiranja objekata
+    this.unsub2;
   }
   // Room GET/SET
   get room() {
@@ -26,6 +27,13 @@ class Chatroom {
   // METOD Update Room
   updateRoom(ur) {
     this.room = ur; // pozove seter u promeni sobu
+    if (this.unsub) {
+      this.unsub();
+    }
+  }
+  // METOD Update Username
+  updateUsername(u) {
+    this.username = u; // pozove seter u promeni sobu
     if (this.unsub) {
       this.unsub();
     }

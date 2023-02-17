@@ -205,7 +205,8 @@ Input Section CSS
 */
 
 #update-btn,
-#send-btn {
+#send-btn,
+#change-color-btn {
   background: var(--clr-primary-5);
   color: var(--clr-white);
   border: 2px solid var(--clr-white);
@@ -215,12 +216,19 @@ Input Section CSS
 #update-btn,
 #send-btn,
 #send-input,
-#update-input {
+#update-input,
+#change-color-btn {
   padding: 0.5rem 0.35rem;
 }
 
+#change-color-input {
+  height: 2.1rem;
+  padding: 0.1rem 0.25rem;
+}
+
 #update-btn:hover,
-#send-btn:hover {
+#send-btn:hover,
+#change-color-btn:hover {
   background-color: var(--clr-white);
   color: var(--clr-primary-5);
   border-color: var(--clr-primary-5);
@@ -249,12 +257,6 @@ User show CSS
 Grid Media Screen CSS
 ===============
 */
-@media only screen and (min-width: 1277px) {
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 
 @media only screen and (min-width: 651px) {
   [class*="col-"] {
@@ -307,7 +309,8 @@ Grid Media Screen CSS
     margin-bottom: 0.25rem;
   }
   #send-input,
-  #update-input {
+  #update-input,
+  #change-color-input {
     margin-bottom: 1rem;
   }
   .remove {
@@ -318,6 +321,9 @@ Grid Media Screen CSS
   }
   #update-btn,
   #send-btn {
+    border-radius: 0px;
+  }
+  #change-color-btn {
     border-radius: 0px;
   }
 }
