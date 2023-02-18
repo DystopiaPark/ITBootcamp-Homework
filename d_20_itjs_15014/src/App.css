@@ -1,0 +1,8 @@
+.App {
+  display: grid;
+  place-items: center;
+}
+label {
+  display: inline-block;
+  min-width: 100px;
+}

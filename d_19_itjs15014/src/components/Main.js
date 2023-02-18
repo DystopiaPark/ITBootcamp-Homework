@@ -15,18 +15,6 @@ class Main extends Component {
     ],
   };
 
-  // handleColor = (id) => {
-  //   this.setState({
-  //     buttons: this.state.buttons.map((el) => {
-  //       for (let i = 0; i < 3; i++) {
-  //         if (el.id[i] === id) {
-  //           return { ...el, pColor: el.color[i] };
-  //         }
-  //       }
-  //     }),
-  //   });
-  // };
-
   handleTextAndColor = (id) => {
     this.setState({
       buttons: this.state.buttons.map((el) => {
