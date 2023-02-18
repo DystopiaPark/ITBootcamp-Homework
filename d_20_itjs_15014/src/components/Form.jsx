@@ -51,7 +51,7 @@ class Form extends Component {
         </div>
         <div>
           <label name="mail">e-mail: </label>
-          <input type="mail" name="mail" onChange={this.handleChange} />
+          <input type="email" name="mail" onChange={this.handleChange} />
         </div>
         <div>
           <label name="password">Password: </label>
