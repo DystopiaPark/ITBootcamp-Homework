@@ -32,12 +32,6 @@ class Form extends Component {
     console.log(this.state);
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    alert("forma je submitovana " + this.state.name);
-  };
-
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
