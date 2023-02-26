@@ -12,7 +12,6 @@ function TodoList() {
     }
 
     const newTodos = [todo, ...todos];
-    localStorage.setItem("list", JSON.stringify(newTodos));
 
     setTodos(newTodos);
     console.log(...todos);
